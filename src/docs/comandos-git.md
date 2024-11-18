@@ -19,7 +19,7 @@ git remote -v
 ```
 git add .
 git commit -m "proyecto backeud"
-git put origin master
+git push origin master
 ```
 ```
 - Para forzar
