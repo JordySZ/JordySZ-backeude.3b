@@ -19,14 +19,18 @@ export class CategoriaService {
   }
 
   async findOne(id: number) {
-    //return `This action returns a #${id} categoria`;
+    return await this.categoriaRepository.findOne({
+      where:{
+        id:id
+      }
+    })
   }
 
   async update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
-    return this.categoriaRepository.update(id,updateCategoriaDto);
+    return await this.categoriaRepository.update(id,updateCategoriaDto);
   }
 
   async remove(id: number) {
-    return this.categoriaRepository.delete(id);
+    return await this.categoriaRepository.delete(id);
   }
 }
